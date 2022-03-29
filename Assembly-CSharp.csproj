@@ -56,9 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\FadeInOut.cs" />
-    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\FadeCanvasGrup.cs" />
+    <Compile Include="Assets\Scripts\GameControllerBase.cs" />
     <Compile Include="Assets\Scripts\AnswerButton.cs" />
+    <Compile Include="Assets\Scripts\IFade.cs" />
+    <Compile Include="Assets\Scripts\FadeColor.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\IAnswerButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
