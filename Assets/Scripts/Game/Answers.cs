@@ -86,8 +86,7 @@ namespace JoanMarc.Game
                 {
                     if (first)
                     {
-                    //StartIdentification();
-                    OnEndhideButtons();
+                        OnEndhideButtons();
                         first = false;
                     }
                 }));
