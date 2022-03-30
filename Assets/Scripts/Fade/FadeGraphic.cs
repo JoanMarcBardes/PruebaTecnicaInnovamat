@@ -7,7 +7,7 @@ using UnityEngine.UI;
 namespace JoanMarc.Fade
 {
     [RequireComponent(typeof(Graphic))]
-    public class FadeColor : MonoBehaviour, IFade
+    public class FadeGraphic : MonoBehaviour, IFade
     {
         private Graphic _graphicItem;
 

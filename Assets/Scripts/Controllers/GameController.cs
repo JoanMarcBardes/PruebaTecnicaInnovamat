@@ -1,29 +1,28 @@
-using JoanMarc.Buttons;
-using JoanMarc.Fade;
-using JoanMarc.Controllers.Shared;
+using JoanMarc.Game;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace JoanMarc.Controllers
 {
-
     public class GameController : GameControllerBase
     {
-        [SerializeField] private Text itemRandomNumberText;
-        [SerializeField] private FadeColor fadeColor;
-        [SerializeField] private AnswerButton[] answerButton;
-        [SerializeField] private string[] numbers = new string[] { "Cero", "Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho", "Nueve" };
+        [SerializeField] private Score score;
+        [SerializeField] private Statement statement;
+        [SerializeField] private Answers answers;
 
         private void Awake()
         {
-            _fadeItem = fadeColor;
-            _answerButtonArray = answerButton;
-            _lenghtList = numbers.Length;
+            _score = score;
+            _statement = statement;
+            _answers = answers;
         }
 
-        protected override void SetItem()
+        protected override void Start()
         {
-            itemRandomNumberText.text = numbers[_currentNumber];
+            _statement.Init();
+
+            _answers.Init(_statement.GetItemsLength());
+
+            base.Start();
         }
     }
 }
